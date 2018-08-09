@@ -104,7 +104,7 @@ class TabBar extends Component {
           <AnimatedViewOverflow style={[styles.item, animatedItemStyle]}>
             <Image
               style={styles.itemMask}
-              source={require("../assets/czapka.png")}
+              source={require("./assets/czapka.png")}
             />
             <Animated.View style={[styles.bubble, animatedBubbleStyle]} />
             <Animated.View style={[miniBubble, animatedMiniBubbleStyle]} />
