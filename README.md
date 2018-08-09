@@ -5,13 +5,11 @@
 
 The Animated Tab Bar for React Native
 
-![Example](https://raw.githubusercontent.com/10clouds/BottomNavigation-ios/master/Static/example.gif)
+![Sample](https://raw.githubusercontent.com/10clouds/FluidBottomNavigation-rn/master/static/sample.gif)
 
 ## Example
 
 To run the example project, clone the repo, and run `npm install` from the Example directory first.
-
-## Requirements
 
 ## Installation
 
@@ -37,8 +35,8 @@ react-native link react-native-view-overflow
 
 ## Author
 
-Patryk Mierzejewski, patryk.mierzejewski@10clouds.com
+[Patryk Mierzejewski](https://github.com/pmierzejewski)
 
 ## License
 
-TabBarController is available under the MIT license. See the LICENSE file for more info.
+FluidBottomNavigation Component is available under the MIT license. See the LICENSE file for more info.
