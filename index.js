@@ -104,10 +104,12 @@ class TabBar extends Component {
           <AnimatedViewOverflow style={[styles.item, animatedItemStyle]}>
             <Image
               style={styles.itemMask}
-              source={require("./assets/czapka.png")}
+              source={require("./assets/mask.png")}
             />
             <Animated.View style={[styles.bubble, animatedBubbleStyle]} />
-            <Animated.View style={[miniBubble, animatedMiniBubbleStyle]} />
+            <Animated.View
+              style={[styles.miniBubble, animatedMiniBubbleStyle]}
+            />
             <Animated.Image source={item.icon} style={animatedImageStyle} />
             <Animated.View style={[styles.titleContainer, animatedTitleStyle]}>
               <Animated.Text
@@ -200,7 +202,7 @@ const styles = {
     backgroundColor: "white"
   },
   item: {
-    backgroundColor: "transparent",
+    backgroundColor: "white",
     borderRadius: 30,
     height: 60,
     width: 60,

@@ -1,6 +1,6 @@
 {
   "name": "fluidbottomnavigation-rn",
-  "version": "0.0.2",
+  "version": "0.0.10",
   "description": "Animated Tab Bar Component for React Native",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,11 @@
   "keywords": [
     "react-native",
     "tabbar",
-    "animated"
+    "animated",
+    "navigation",
+    "react-component",
+    "ios",
+    "android"
   ],
   "author": "Patryk Mierzejewski",
   "license": "MIT",

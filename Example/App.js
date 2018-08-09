@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Platform, StyleSheet, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import TabBar from "fluidbottomnavigation-rn";
 
 export default class App extends Component {
