@@ -8,6 +8,9 @@ export default class App extends Component {
       <View style={styles.container}>
         <View />
         <TabBar
+          onPress={tabIndex => {
+            console.log("render component with index: ", tabIndex);
+          }}
           values={[
             { title: "News", icon: require("./assets/news.png") },
             { title: "Requests", icon: require("./assets/requests.png") },

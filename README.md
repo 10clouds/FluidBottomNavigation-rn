@@ -13,25 +13,34 @@ To run the example project, clone the repo, and run `npm install` from the Examp
 
 ## Installation
 
-It is available through [NPMJS](https://npmjs.com). To install just type
+It is available through [npm](https://npmjs.com). To install just run
 
 ```
 npm i flowbottomnavigation-rn
 ```
 
-and then link the native dependencies in your project
-
-```
-react-native link react-native-view-overflow
-```
+in your project directory.
 
 ## Usage
 
-**todo**
+This component requires just 2 props. `onPress` function, that should handle rendering tabs and an array of `values` objects that contains title and icons for given tabs.
+
+```JSX
+<TabBar
+  onPress={(tabIndex) => { this._handlePress(tabIndex) }}
+  values={[
+    { title: "News", icon: require("./assets/news.png") },
+    { title: "Requests", icon: require("./assets/requests.png") },
+    { title: "Events", icon: require("./assets/events.png") },
+    { title: "Members", icon: require("./assets/members.png") },
+    { title: "Account", icon: require("./assets/account.png") }
+  ]}
+/>
+```
 
 ## Customization
 
-**todo**
+Optionally you can pass `tintColor` prop, to adjust styling to your app.
 
 ## Author
 
