@@ -1,0 +1,31 @@
+{
+  "name": "fluidbottomnavigation-rn",
+  "version": "0.0.1",
+  "description": "Animated Tab Bar Component for React Native",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/10clouds/FluidBottomNavigation-rn.git"
+  },
+  "keywords": [
+    "react-native",
+    "tabbar",
+    "animated"
+  ],
+  "author": "Patryk Mierzejewski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/10clouds/FluidBottomNavigation-rn/issues"
+  },
+  "homepage": "https://github.com/10clouds/FluidBottomNavigation-rn#readme",
+  "dependencies": {
+    "react-native-view-overflow": "^0.0.3"
+  },
+  "peerDependencies": {
+    "react": ">=16.0.0",
+    "react-native": ">=0.55.0"
+  }
+}
