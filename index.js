@@ -5,6 +5,7 @@ import {
   Easing,
   Image
 } from "react-native";
+import PropTypes from "prop-types";
 import ViewOverflow from "react-native-view-overflow";
 
 const AnimatedViewOverflow = Animated.createAnimatedComponent(ViewOverflow);
@@ -191,6 +192,17 @@ class TabBar extends Component {
     );
   }
 }
+
+TabBar.propTypes = {
+  onPress: PropTypes.func.isRequired,
+  values: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      icon: PropTypes.object.isRequired
+    })
+  ),
+  tintColor: PropTypes.string
+};
 
 const styles = {
   container: {

@@ -1,4 +1,4 @@
-# BottomNavigation for React Native
+# FluidBottomNavigation for React Native
 
 [![NpmVersion](https://img.shields.io/npm/v/fluidbottomnavigation-rn.svg?style=flat-square)](https://www.npmjs.com/package/fluidbottomnavigation-rn)
 [![NpmLicense](https://img.shields.io/npm/l/fluidbottomnavigation-rn.svg?style=flat-square)](https://www.npmjs.com/package/fluidbottomnavigation-rn)
@@ -16,7 +16,7 @@ To run the example project, clone the repo, and run `npm install` from the Examp
 It is available through [npm](https://npmjs.com). To install just run
 
 ```
-npm i flowbottomnavigation-rn
+npm i fluidbottomnavigation-rn
 ```
 
 in your project directory.
