@@ -1,3 +1,5 @@
+/*global require*/
+
 import React, { Component } from "react";
 import {
   TouchableWithoutFeedback,
@@ -214,7 +216,7 @@ TabBar.propTypes = {
   values: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,
-      icon: PropTypes.object.isRequired
+      icon: PropTypes.number.isRequired
     })
   ),
   tintColor: PropTypes.string

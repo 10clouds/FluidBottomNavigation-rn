@@ -1,10 +1,9 @@
 {
   "name": "fluidbottomnavigation-rn",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Animated Tab Bar Component for React Native",
   "main": "index.js",
   "scripts": {
-    "postinstall": "cd ../../ && react-native link react-native-view-overflow",
     "test": "jest"
   },
   "repository": {
@@ -35,11 +34,16 @@
     "prop-types": "^15.6.2"
   },
   "devDependencies": {
-    "react": ">=16.0.0",
-    "react-native": ">=0.55.0",
+    "babel-eslint": "^8.2.6",
     "babel-jest": "23.4.2",
     "babel-preset-react-native": "^5",
+    "eslint": "^5.3.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.10.0",
     "jest": "23.4.2",
+    "react": ">=16.0.0",
+    "react-native": ">=0.55.0",
     "react-test-renderer": "16.4.1"
   },
   "jest": {

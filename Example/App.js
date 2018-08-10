@@ -1,3 +1,5 @@
+/*global require*/
+
 import React, { Component } from "react";
 import { StyleSheet, View } from "react-native";
 import TabBar from "fluidbottomnavigation-rn";
@@ -9,6 +11,7 @@ export default class App extends Component {
         <View />
         <TabBar
           onPress={tabIndex => {
+            // eslint-disable-next-line no-console
             console.log("render component with index: ", tabIndex);
           }}
           values={[

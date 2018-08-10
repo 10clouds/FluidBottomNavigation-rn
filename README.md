@@ -19,7 +19,13 @@ It is available through [npm](https://npmjs.com). To install just run
 npm i fluidbottomnavigation-rn
 ```
 
-in your project directory.
+in your project directory. And then link it's native dependency with
+
+```
+react-native link react-native-view-overflow
+```
+
+and you're done!
 
 ## Usage
 
