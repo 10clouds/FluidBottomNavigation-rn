@@ -25,6 +25,10 @@ class TabBar extends Component {
     });
   }
 
+  static defaultProps = {
+    tintColor: "rgb(76, 83, 221)"
+  };
+
   state = {
     lastSelectedIndex: null
   };
@@ -44,7 +48,7 @@ class TabBar extends Component {
 
       const animatedColorValues = this.animatedImageValues[index].interpolate({
         inputRange: [0, 1],
-        outputRange: ["rgb(76, 83, 221)", "rgb(255, 255, 255)"]
+        outputRange: [this.props.tintColor, "rgb(255, 255, 255)"]
       });
 
       const animatedBubbleStyle = {
@@ -100,6 +104,8 @@ class TabBar extends Component {
             this.setState({
               lastSelectedIndex: index
             });
+
+            this.props.onPress(index);
           }}
         >
           <AnimatedViewOverflow style={[styles.item, animatedItemStyle]}>
@@ -107,9 +113,19 @@ class TabBar extends Component {
               style={styles.itemMask}
               source={require("./assets/mask.png")}
             />
-            <Animated.View style={[styles.bubble, animatedBubbleStyle]} />
             <Animated.View
-              style={[styles.miniBubble, animatedMiniBubbleStyle]}
+              style={[
+                styles.bubble,
+                { backgroundColor: this.props.tintColor },
+                animatedBubbleStyle
+              ]}
+            />
+            <Animated.View
+              style={[
+                styles.miniBubble,
+                { backgroundColor: this.props.tintColor },
+                animatedMiniBubbleStyle
+              ]}
             />
             <Animated.Image source={item.icon} style={animatedImageStyle} />
             <Animated.View style={[styles.titleContainer, animatedTitleStyle]}>
@@ -117,7 +133,7 @@ class TabBar extends Component {
                 numberOfLines={1}
                 adjustsFontSizeToFit={true}
                 style={{
-                  color: "#4C53DD"
+                  color: this.props.tintColor
                 }}
               >
                 {item.title}
