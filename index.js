@@ -232,7 +232,7 @@ const styles = {
     backgroundColor: "white"
   },
   item: {
-    backgroundColor: "white",
+    backgroundColor: "transparent",
     borderRadius: 30,
     height: 60,
     width: 60,
