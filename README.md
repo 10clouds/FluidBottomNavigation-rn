@@ -61,6 +61,10 @@ Optionally you can pass `tintColor` prop, to adjust styling to your app.
 
 4. default => Now you can setdefault tab by passing additional parameter in values object
 
+5. containerBackgroundColor => Now you can change default container background color by passing color value to `containerBackgroundColor` prop
+
+6. itemMaskBackgroundColor => Now you can change default mask color by passing color value to `itemMaskBackgroundColor` prop
+
 ### Extra paramters added
 | Property      | Type          | Default       | Description   | Required      |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
@@ -68,6 +72,8 @@ Optionally you can pass `tintColor` prop, to adjust styling to your app.
 | isRtl  | Boolean  | false  | If you have rtl in your app, set valueto true and the bottom tab bar will show in reverse order  | false  |
 | tintColor  | String  | Black  | You can assign custom color for each icon by passing tintColor prop along with title and icon. This can be used to assign unique color for active tab  | true  |
 | default  | Boolean  | false  | Now default tab can be set by passing default prop along with title and icon. This can be used to focus aspecific tab before any user interaction  | true  |
+| containerBackgroundColor  | String  | white  | Now you can change default container background color by passing color value to `containerBackgroundColor` prop. It accespts string and hex values  | false  |
+| itemMaskBackgroundColor  | String  | white  | Now you can change default mask color by passing color value to `itemMaskBackgroundColor` prop. It accespts string and hex values  | false  |
 
 ## Author
 

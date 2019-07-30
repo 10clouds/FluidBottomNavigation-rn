@@ -24,7 +24,9 @@ interface valuesProp {
 interface TabBarProps {
 	iconStyle: ImageStyle,
 	values: Array<valuesProp>,
-	isRtl: Boolean
+	isRtl: Boolean,
+	containerBackgroundColor: String,
+	itemMaskBackgroundColor: String
 }
 
 class TabBar extends Component<TabBarProps> {
@@ -44,14 +46,16 @@ class TabBar extends Component<TabBarProps> {
 			this.animatedBubbleValues[index] = new Animated.Value(item.default ? 1 : 0);
 			this.animatedImageValues[index] = new Animated.Value(item.default ? 1 : 0);
 			this.animatedMiniBubbleValues[index] = new Animated.Value(item.default ? 1 : 0);
-			item.default && (this.state = {lastSelectedIndex : index })
+			item.default && (this.state = { lastSelectedIndex: index })
 		});
 	}
 
 	static defaultProps = {
 		tintColor: "rgb(76, 83, 221)",
 		iconStyle: { width: 20, height: 20 },
-		isRtl: false
+		isRtl: false,
+		containerBackgroundColor: "white",
+		itemMaskBackgroundColor: "white",
 	};
 
 	_renderButtons = () => {
@@ -132,7 +136,7 @@ class TabBar extends Component<TabBarProps> {
 				>
 					<AnimatedViewOverflow style={[styles.item, animatedItemStyle]}>
 						<Image
-							style={styles.itemMask}
+							style={[styles.itemMask, { tintColor: this.props.itemMaskBackgroundColor}]}
 							source={require("./assets/mask.png")}
 						/>
 						<Animated.View
@@ -150,7 +154,7 @@ class TabBar extends Component<TabBarProps> {
 							]}
 						/>
 						{/* <Animated.Text>ooooo {JSON.stringify(item.default)}</Animated.Text> */}
-						<Animated.Image source={item.icon} style={[animatedImageStyle, iconStyle, { tintColor: item.tintColor }]} />
+						<Animated.Image source={item.icon} style={[animatedImageStyle, iconStyle, { tintColor: item.tintColor }]} resizeMode="contain" />
 						<Animated.View style={[styles.titleContainer, animatedTitleStyle]}>
 							<Animated.Text
 								numberOfLines={1}
@@ -226,7 +230,7 @@ class TabBar extends Component<TabBarProps> {
 	render() {
 		const { isRtl } = this.props
 		return (
-			<AnimatedViewOverflow style={[styles.container, { flexDirection: `row${!isRtl?"":"-reverse"}`}]}>
+			<AnimatedViewOverflow style={[styles.container, { flexDirection: `row${!isRtl ? "" : "-reverse"}`, backgroundColor: this.props.containerBackgroundColor }]}>
 				{this._renderButtons()}
 			</AnimatedViewOverflow>
 		);
@@ -252,11 +256,10 @@ const styles = {
 		height: 60,
 		width: "100%",
 		justifyContent: "space-around",
-		alignItems: "center",
-		backgroundColor: "white"
+		alignItems: "center"
 	},
 	item: {
-		backgroundColor: "white",
+		backgroundColor: "transparent",
 		borderRadius: 30,
 		height: 60,
 		width: 60,
@@ -264,7 +267,6 @@ const styles = {
 		justifyContent: "center"
 	},
 	itemMask: {
-		tintColor: "white",
 		position: "absolute"
 	},
 	bubble: {
